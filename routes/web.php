@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -7,10 +8,4 @@ Route::get('/', function () {
 });
 
 
-Route::get('helloworld', function () {
-    $name = 'Kamal Norizan';
-    $phone = '012-3456789';
-    $email = 'kamal@example.com';
-
-    return view('helloworld',compact('name','phone','email'));
-});
+Route::get('helloworld', [TestController::class, 'index']);
