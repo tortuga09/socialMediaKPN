@@ -7,8 +7,8 @@
 </head>
 <body>
     <h1>Hello {{ $name }}
-        Phone: {{ $phone }}
-        Email: {{ $email }}
+        Phone: {{ $phone ?? '0123456789' }}
+        Email: {{ $email ?? 'example@example.com' }}
     </h1>
 </body>
 </html>
