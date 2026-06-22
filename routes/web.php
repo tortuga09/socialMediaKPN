@@ -8,5 +8,9 @@ Route::get('/', function () {
 
 
 Route::get('helloworld', function () {
-    return view('helloworld');
+    $name = 'Kamal Norizan';
+    $phone = '012-3456789';
+    $email = 'kamal@example.com';
+
+    return view('helloworld',compact('name','phone','email'));
 });
